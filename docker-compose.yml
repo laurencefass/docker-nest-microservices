@@ -1,0 +1,36 @@
+# from https://github.com/majoyal/nestjs-microservices-example
+
+version: '3.5'
+
+services:
+    api-service:
+        container_name: api-service
+        image: node:14.21.2-alpine3.17
+        ports:
+            - 3000:3000
+        expose: 
+            - "6000"
+        restart: unless-stopped
+        working_dir: /app
+        volumes:
+            - .:/app
+        command: 'npm run start:dev'
+        networks:
+            - microservices
+
+    worker-service:
+        container_name: worker-service
+        image: node:14.21.2-alpine3.17
+        expose:
+            - "5000"
+        restart: unless-stopped
+        working_dir: /app
+        volumes:
+            - .:/app
+        command: 'npm run start:worker'
+        networks:
+            - microservices
+
+networks:
+  microservices:
+    driver: bridge
