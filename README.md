@@ -2,8 +2,7 @@
 
 This is a dockerized fork of https://github.com/majoyal/nestjs-microservices-example see repo for a detailed explanation or to run on localhost.
 
-It will run microservices in separate docker containers. To understand the benefits of doing see:
-https://www.meritdata-tech.com/resources/whitepaper/digital-engineering-solutions/microservices-architecture-docker-kubernetes/#:~:text=Some%20of%20the%20advantages%20of,therefore%20cost%20and%20resource%2Deffective
+It will run nest js microservices in separate docker containers and configure correct networking between them. To understand the benefits of doing [read this article](https://blog.dreamfactory.com/what-are-containerized-microservices/)
 
 ## Installation
 
