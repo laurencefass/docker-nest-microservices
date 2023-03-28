@@ -4,10 +4,10 @@ This is a dockerized fork of https://github.com/majoyal/nestjs-microservices-exa
 
 This repo exists to run nest js microservices in distinct docker containers and configure correct networking settings not included in the original repo. To appreciate the benefits of containerising microservices [read this article](https://blog.dreamfactory.com/what-are-containerized-microservices/)
 
-## Docker compose notes: 
+## Docker notes: 
 
-- uses a custom network
-- only exposes the http port to the 
+- uses a custom network to communicate between microservices 
+- only publishes the http port to localhost
 - all microservice ports are internal on network only available to eachother
 - uses bind mounts so not need to create separate docker images
 
