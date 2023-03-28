@@ -6,10 +6,10 @@ It will run nest js microservices in separate docker containers and configure co
 
 ### Docker notes
 
-uses a custom network to communicate between microservices
-only publishes the http port to localhost
-all microservice ports are internal on network only available to eachother
-uses bind mounts so not need to create separate docker images
+- uses a custom network to communicate between microservices
+- only publishes the http port to localhost
+- all microservice ports are internal on network only available to eachother
+- uses bind mounts so not need to create separate docker images
 
 ## Installation
 
