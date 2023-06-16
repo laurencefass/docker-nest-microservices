@@ -5,8 +5,7 @@ import { Transport } from '@nestjs/microservices';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-
-  const conf = app.get<ConfigService>(ConfigService);
+    const conf = app.get<ConfigService>(ConfigService);
 
   app.connectMicroservice({
     transport: Transport.TCP,
